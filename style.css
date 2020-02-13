@@ -4,7 +4,9 @@
   --height: 30;
 }
 .bar {
-  width: 100%;
+  width: 25vw;
   height: calc(var(--height) * 1px);
-  color: darkcyan;
+  background-color: darkcyan;
+  border: 1px solid black;
+  margin: 1px;
 }
