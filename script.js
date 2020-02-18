@@ -2,18 +2,18 @@
 window.addEventListener("DOMContentLoaded", arrayExceeds);
 let myArray = [];
 let counter = 0;
-let timeOut = 200;
+let timeOut = 1000;
 
 function arrayExceeds() {
-  if (counter <= myArray.length) {
+  if (counter < 39) {
     addSomething();
   } else {
     addSomething();
-    myArray.pop();
+    myArray.shift();
   }
 }
 function addSomething() {
-  myArray.unshift(Math.floor(Math.random() * 32));
+  myArray.push(Math.floor(Math.random() * 32));
   counter++;
   console.log(myArray);
   setTimeout(arrayExceeds, timeOut);
@@ -21,11 +21,6 @@ function addSomething() {
 }
 
 function setHeight() {
-  //   document.querySelectorAll(".bar").forEach((bar, i) => {
-  // bar.style.setProperty("--height", myArray[i]);
-
-  //});
-
   for (let i = 0; i < myArray.length; i++) {
     let bar;
     bar = document.querySelector(`#bar > div:nth-child(${i + 1})`);
